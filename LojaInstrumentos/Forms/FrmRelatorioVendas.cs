@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace LojaInstrumentos.Forms
 {
-    public partial class FrmRelatorioVendas : Form
+    public partial class FrmRelatorioVendas : System.Windows.Forms.Form
     {
         public FrmRelatorioVendas()
         {
             InitializeComponent();
+        }
+
+        private void FrmRelatorioVendas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

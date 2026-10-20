@@ -33,7 +33,7 @@
             button2 = new Button();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvVendas).BeginInit();
-            SuspendLayout();
+            this.SuspendLayout();
             // 
             // dgvVendas
             // 
@@ -72,18 +72,19 @@
             // 
             // FrmRelatorioVendas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dgvVendas);
-            Name = "FrmRelatorioVendas";
-            Text = "FrmRelatorioVendas";
+            this.AutoScaleDimensions = new SizeF(7F, 15F);
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.ClientSize = new Size(800, 450);
+            this.Controls.Add(label1);
+            this.Controls.Add(button2);
+            this.Controls.Add(button1);
+            this.Controls.Add(dgvVendas);
+            this.Name = "FrmRelatorioVendas";
+            this.Text = "FrmRelatorioVendas";
+            this.Load += this.FrmRelatorioVendas_Load;
             ((System.ComponentModel.ISupportInitialize)dgvVendas).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion

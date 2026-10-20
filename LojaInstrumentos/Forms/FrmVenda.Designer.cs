@@ -1,4 +1,4 @@
-﻿namespace LojaInstrumentos.Forms
+﻿namespace LojaInstrumentos.Form
 {
     partial class FrmVenda
     {
@@ -85,10 +85,11 @@
             // 
             // txtPreco
             // 
-            txtPreco.Location = new Point(414, 202);
+            txtPreco.Location = new Point(414, 114);
             txtPreco.Name = "txtPreco";
             txtPreco.Size = new Size(157, 23);
             txtPreco.TabIndex = 5;
+            txtPreco.TextChanged += txtPreco_TextChanged;
             // 
             // nudQuantidade
             // 
