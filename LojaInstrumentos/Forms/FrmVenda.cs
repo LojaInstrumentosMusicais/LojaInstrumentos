@@ -21,7 +21,6 @@ namespace LojaInstrumentos.Form
         public FrmVenda()
         {
             InitializeComponent();
-
             ConfigurarInstrumentos();
 
             cmbInstrumento.SelectedIndexChanged +=
@@ -35,9 +34,7 @@ namespace LojaInstrumentos.Form
 
         private void ConfigurarInstrumentos()
         {
-            cmbInstrumento.DropDownStyle =
-                ComboBoxStyle.DropDownList;
-
+            cmbInstrumento.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbInstrumento.Items.Clear();
 
             foreach (string instrumento in _instrumentos.Keys)
@@ -53,7 +50,6 @@ namespace LojaInstrumentos.Form
 
             txtPreco.ReadOnly = true;
             txtPreco.Text = "R$ 0,00";
-
             lblTotal.Text = "Total: R$ 0,00";
         }
 
@@ -134,11 +130,10 @@ namespace LojaInstrumentos.Form
 
         private void btnRelatorio_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "A tela de relatório será integrada na próxima etapa.",
-                "Sonora",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            using (var relatorio = new FrmRelatorioVendas())
+            {
+                relatorio.ShowDialog();
+            }
         }
 
         private void txtPreco_TextChanged(object sender, EventArgs e)

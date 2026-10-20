@@ -1,102 +1,99 @@
-﻿namespace LojaInstrumentos.Forms
+﻿
+namespace LojaInstrumentos.Form
 {
     partial class FrmRelatorioVendas
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
+
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            dgvVendas = new DataGridView();
-            btnAtualizar = new Button();
-            btnVoltar = new Button();
-            lblTotalVendas = new Label();
-            lblTitulo = new Label();
+            lblTitulo = new System.Windows.Forms.Label();
+            dgvVendas = new System.Windows.Forms.DataGridView();
+            lblTotalVendas = new System.Windows.Forms.Label();
+            btnAtualizar = new System.Windows.Forms.Button();
+            btnVoltar = new System.Windows.Forms.Button();
+
             ((System.ComponentModel.ISupportInitialize)dgvVendas).BeginInit();
             SuspendLayout();
-            // 
+
+            // lblTitulo
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new System.Drawing.Font(
+                "Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            lblTitulo.Location = new System.Drawing.Point(25, 20);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new System.Drawing.Size(215, 30);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Relatório de Vendas";
+
             // dgvVendas
-            // 
             dgvVendas.AllowUserToAddRows = false;
-            dgvVendas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvVendas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVendas.Location = new Point(93, 12);
+            dgvVendas.AutoSizeColumnsMode =
+                System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvVendas.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvVendas.Location = new System.Drawing.Point(25, 70);
             dgvVendas.Name = "dgvVendas";
             dgvVendas.ReadOnly = true;
-            dgvVendas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvVendas.Size = new Size(620, 150);
-            dgvVendas.TabIndex = 0;
-            // 
+            dgvVendas.SelectionMode =
+                System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvVendas.Size = new System.Drawing.Size(830, 320);
+            dgvVendas.TabIndex = 1;
+
+            // lblTotalVendas
+            lblTotalVendas.AutoSize = true;
+            lblTotalVendas.Font = new System.Drawing.Font(
+                "Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            lblTotalVendas.Location = new System.Drawing.Point(25, 410);
+            lblTotalVendas.Name = "lblTotalVendas";
+            lblTotalVendas.Size = new System.Drawing.Size(185, 20);
+            lblTotalVendas.TabIndex = 2;
+            lblTotalVendas.Text = "Total de vendas: R$ 0,00";
+
             // btnAtualizar
-            // 
-            btnAtualizar.Location = new Point(345, 258);
+            btnAtualizar.Location = new System.Drawing.Point(600, 410);
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(75, 23);
-            btnAtualizar.TabIndex = 1;
+            btnAtualizar.Size = new System.Drawing.Size(120, 35);
+            btnAtualizar.TabIndex = 3;
             btnAtualizar.Text = "Atualizar";
             btnAtualizar.UseVisualStyleBackColor = true;
-            // 
+            btnAtualizar.Click += btnAtualizar_Click;
+
             // btnVoltar
-            // 
-            btnVoltar.Location = new Point(197, 258);
+            btnVoltar.Location = new System.Drawing.Point(735, 410);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(75, 23);
-            btnVoltar.TabIndex = 2;
+            btnVoltar.Size = new System.Drawing.Size(120, 35);
+            btnVoltar.TabIndex = 4;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
-            // 
-            // lblTotalVendas
-            // 
-            lblTotalVendas.AutoSize = true;
-            lblTotalVendas.Location = new Point(494, 262);
-            lblTotalVendas.Name = "lblTotalVendas";
-            lblTotalVendas.Size = new Size(132, 15);
-            lblTotalVendas.TabIndex = 3;
-            lblTotalVendas.Text = "Total de vendas: R$ 0,00";
-            // 
-            // lblTitulo
-            // 
-            lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(312, 188);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(110, 15);
-            lblTitulo.TabIndex = 4;
-            lblTitulo.Text = "Relatório de Vendas";
-            // 
+            btnVoltar.Click += btnVoltar_Click;
+
             // FrmRelatorioVendas
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode =
+                System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(884, 471);
             Controls.Add(lblTitulo);
-            Controls.Add(lblTotalVendas);
-            Controls.Add(btnVoltar);
-            Controls.Add(btnAtualizar);
             Controls.Add(dgvVendas);
+            Controls.Add(lblTotalVendas);
+            Controls.Add(btnAtualizar);
+            Controls.Add(btnVoltar);
             Name = "FrmRelatorioVendas";
-            Text = "FrmRelatorioVendas";
+            StartPosition =
+                System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Sonora | Relatório de Vendas";
             Load += FrmRelatorioVendas_Load;
+
             ((System.ComponentModel.ISupportInitialize)dgvVendas).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -104,10 +101,10 @@
 
         #endregion
 
-        private DataGridView dgvVendas;
-        private Button btnAtualizar;
-        private Button btnVoltar;
-        private Label lblTotalVendas;
-        private Label lblTitulo;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridView dgvVendas;
+        private System.Windows.Forms.Label lblTotalVendas;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

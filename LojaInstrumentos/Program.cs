@@ -1,4 +1,4 @@
-using LojaInstrumentos.Forms;
+using LojaInstrumentos.Form;
 
 namespace LojaInstrumentos
 {
