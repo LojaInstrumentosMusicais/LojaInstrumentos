@@ -10,7 +10,7 @@ namespace LojaInstrumentos
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Em construção");
-            // FrmX tela = new FrmX();
+            // FrmX tela = new FrmVendas();
             // tela.ShowDialog();
         }
 
@@ -23,7 +23,7 @@ namespace LojaInstrumentos
         private void btnRelatorio_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Em construção");
-            // FrmX tela = new FrmX();
+            // FrmX tela = new FrmRepositorioVendas();
             // tela.ShowDialog();
         }
 
