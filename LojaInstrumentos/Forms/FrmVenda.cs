@@ -126,6 +126,8 @@ namespace LojaInstrumentos.Form
                 "Venda registrada",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            AtualizarTotal();
         }
 
         private void btnRelatorio_Click(object sender, EventArgs e)
