@@ -29,69 +29,85 @@
         private void InitializeComponent()
         {
             dgvVendas = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
-            label1 = new Label();
+            btnAtualizar = new Button();
+            btnVoltar = new Button();
+            lblTotalVendas = new Label();
+            lblTitulo = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvVendas).BeginInit();
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // dgvVendas
             // 
+            dgvVendas.AllowUserToAddRows = false;
+            dgvVendas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvVendas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVendas.Location = new Point(173, 234);
+            dgvVendas.Location = new Point(93, 12);
             dgvVendas.Name = "dgvVendas";
-            dgvVendas.Size = new Size(405, 150);
+            dgvVendas.ReadOnly = true;
+            dgvVendas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvVendas.Size = new Size(620, 150);
             dgvVendas.TabIndex = 0;
             // 
-            // button1
+            // btnAtualizar
             // 
-            button1.Location = new Point(333, 94);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnAtualizar.Location = new Point(345, 258);
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(75, 23);
+            btnAtualizar.TabIndex = 1;
+            btnAtualizar.Text = "Atualizar";
+            btnAtualizar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnVoltar
             // 
-            button2.Location = new Point(333, 158);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnVoltar.Location = new Point(197, 258);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(75, 23);
+            btnVoltar.TabIndex = 2;
+            btnVoltar.Text = "Voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblTotalVendas
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(518, 121);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
+            lblTotalVendas.AutoSize = true;
+            lblTotalVendas.Location = new Point(494, 262);
+            lblTotalVendas.Name = "lblTotalVendas";
+            lblTotalVendas.Size = new Size(132, 15);
+            lblTotalVendas.TabIndex = 3;
+            lblTotalVendas.Text = "Total de vendas: R$ 0,00";
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Location = new Point(312, 188);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(110, 15);
+            lblTitulo.TabIndex = 4;
+            lblTitulo.Text = "Relatório de Vendas";
             // 
             // FrmRelatorioVendas
             // 
-            this.AutoScaleDimensions = new SizeF(7F, 15F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(800, 450);
-            this.Controls.Add(label1);
-            this.Controls.Add(button2);
-            this.Controls.Add(button1);
-            this.Controls.Add(dgvVendas);
-            this.Name = "FrmRelatorioVendas";
-            this.Text = "FrmRelatorioVendas";
-            this.Load += this.FrmRelatorioVendas_Load;
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblTotalVendas);
+            Controls.Add(btnVoltar);
+            Controls.Add(btnAtualizar);
+            Controls.Add(dgvVendas);
+            Name = "FrmRelatorioVendas";
+            Text = "FrmRelatorioVendas";
+            Load += FrmRelatorioVendas_Load;
             ((System.ComponentModel.ISupportInitialize)dgvVendas).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dgvVendas;
-        private Button button1;
-        private Button button2;
-        private Label label1;
+        private Button btnAtualizar;
+        private Button btnVoltar;
+        private Label lblTotalVendas;
+        private Label lblTitulo;
     }
 }
