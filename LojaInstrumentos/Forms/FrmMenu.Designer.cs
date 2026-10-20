@@ -43,7 +43,7 @@
             label1.Size = new Size(291, 32);
             label1.TabIndex = 0;
             label1.Text = "Instrumentos do Bigode";
-            label1.Click += label1_Click;
+            label1.Click += label1_Click_1;
             // 
             // btnVenda
             // 
@@ -63,6 +63,7 @@
             btnRelatorio.TabIndex = 2;
             btnRelatorio.Text = "Relatório de Vendas";
             btnRelatorio.UseVisualStyleBackColor = true;
+            btnRelatorio.Click += btnRelatorio_Click;
             // 
             // btnSair
             // 
@@ -83,6 +84,8 @@
             Controls.Add(btnRelatorio);
             Controls.Add(btnVenda);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FrmMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Loja de Instrumentos - Menu";
