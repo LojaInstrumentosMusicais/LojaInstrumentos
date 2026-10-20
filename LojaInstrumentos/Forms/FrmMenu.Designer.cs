@@ -1,6 +1,6 @@
 ﻿namespace LojaInstrumentos
 {
-    partial class Form1
+    partial class FrmMenu
     {
         /// <summary>
         ///  Required designer variable.
