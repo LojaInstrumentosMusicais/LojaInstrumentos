@@ -46,6 +46,7 @@
             btnRegistrar.TabIndex = 0;
             btnRegistrar.Text = "Registrar venda";
             btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // btnRelatorio
             // 

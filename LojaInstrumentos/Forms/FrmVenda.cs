@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
+using LojaInstrumentos.Models;
 
 namespace LojaInstrumentos.Form
 {
@@ -91,6 +92,46 @@ namespace LojaInstrumentos.Form
                 "C2", CultureInfo.GetCultureInfo("pt-BR"));
         }
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (cmbInstrumento.SelectedItem == null)
+            {
+                MessageBox.Show(
+                    "Selecione um instrumento.",
+                    "Atenção",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return;
+            }
+
+            string instrumento =
+                cmbInstrumento.SelectedItem.ToString()!;
+
+            int quantidade = (int)nudQuantidade.Value;
+            decimal preco = _instrumentos[instrumento];
+
+            var venda = new Venda
+            {
+                Id = RepositorioVendas.Vendas.Count + 1,
+                Data = DateTime.Now,
+                Instrumento = instrumento,
+                Quantidade = quantidade,
+                PrecoUnitario = preco
+            };
+
+            RepositorioVendas.Vendas.Add(venda);
+
+            MessageBox.Show(
+                $"Venda registrada com sucesso!\n\n" +
+                $"Instrumento: {instrumento}\n" +
+                $"Quantidade: {quantidade}\n" +
+                $"Total: {venda.Total.ToString("C2", CultureInfo.GetCultureInfo("pt-BR"))}",
+                "Venda registrada",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
         private void btnRelatorio_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
@@ -102,7 +143,7 @@ namespace LojaInstrumentos.Form
 
         private void txtPreco_TextChanged(object sender, EventArgs e)
         {
-
+            // O preço é preenchido automaticamente pelo sistema.
         }
     }
 }

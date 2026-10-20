@@ -1,5 +1,5 @@
 
-namespace LojaInstrumentosMusicais.Models
+namespace LojaInstrumentos.Models
 {
     public class Venda
     {
@@ -9,7 +9,6 @@ namespace LojaInstrumentosMusicais.Models
         public int Quantidade { get; set; }
         public decimal PrecoUnitario { get; set; }
 
-        public decimal Total =>
-            Quantidade * PrecoUnitario;
+        public decimal Total => Quantidade * PrecoUnitario;
     }
 }
